@@ -37,14 +37,14 @@ public class TestGriglia : MonoBehaviour
             Debug.LogError($"Conversione errata: coord={coord}, prima={ris}, dopo={ris2}");
         }
 
-        Cella risultato2 = griglia.LeggiCella(-1, 100);
-        if (risultato2 == null)
+        Cella risultato2 = griglia.LeggiCella(4, 3);
+        if (risultato2 == null || risultato2.tipo != TipoCella.nulla)
         {
-            Debug.Log("Test cella non valida: OK - griglia.LeggiCella(-1,100) ha restituito null.");
+            Debug.LogError($"Test cella non valida: ERRORE - atteso null, ottenuto tipo={risultato2.tipo}");
         }
         else
         {
-            Debug.LogError($"Test cella non valida: ERRORE - atteso null, ottenuto tipo={risultato2.tipo}");
+            Debug.Log("Test inversione indici: OK - (4,3) è vuota, nessuna trappola letta per sbaglio.");
         }
     }
 

@@ -19,12 +19,12 @@ public class Griglia : MonoBehaviour
 
   public void Awake(){
    
-    celle = new Cella[Altezza,Largezza];
-    for (int Riga = 0; Riga < Altezza; Riga++)
+    celle = new Cella[Largezza,Altezza];
+    for (int Colonna = 0; Colonna < Largezza; Colonna++)
     {
-       for(int Colonna = 0; Colonna < Largezza;Colonna++){
+       for(int Riga = 0; Riga < Altezza;Riga++){
         
-        celle[Riga,Colonna] = new Cella();
+        celle[Colonna,Riga] = new Cella();
            Debug.Log("Cella creata in posizione: " + Riga + "," + Colonna);
        
        } 
