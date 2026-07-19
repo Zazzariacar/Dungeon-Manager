@@ -18,7 +18,7 @@ public class Griglia : MonoBehaviour
   Cella[,] celle;
 
   public void Awake(){
-    Vector3 posizione = new Vector3();
+   
     celle = new Cella[Altezza,Largezza];
     for (int Riga = 0; Riga < Altezza; Riga++)
     {
