@@ -12,15 +12,15 @@ public class Cella {
 public class Griglia : MonoBehaviour
 {
   public int Altezza = 10;
-  public int Largezza = 10;
+  public int Larghezza = 10;
   public float dimensioneCella = 2f;
 
   Cella[,] celle;
 
   public void Awake(){
    
-    celle = new Cella[Largezza,Altezza];
-    for (int Colonna = 0; Colonna < Largezza; Colonna++)
+    celle = new Cella[Larghezza,Altezza];
+    for (int Colonna = 0; Colonna < Larghezza; Colonna++)
     {
        for(int Riga = 0; Riga < Altezza;Riga++){
         
@@ -58,7 +58,7 @@ public class Griglia : MonoBehaviour
            
             return false;
         }
-        else if(x < 0 || x >= Largezza)
+        else if(x < 0 || x >= Larghezza)
         {
             
             return false;    
